@@ -1,6 +1,25 @@
 " vi互換を無効化
 set nocompatible
 
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" bundle
+" vim-scripts repos
+Bundle 'rails.vim'
+Bundle "git://github.com/scrooloose/nerdtree.git"
+
+filetype plugin indent on
+
+" plugin setting
+let file_name = expand("%")
+if has('vim_starting') &&  file_name == ""
+  autocmd VimEnter * NERDTree ./
+endif
+let NERDTreeSplitVertical=0
+
 " syntaxを有効化
 syntax on
 
@@ -24,9 +43,6 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 
 " nowrap
 "set nowrap
-
-" ファイル形式の検出を有効化
-filetype on
 
 " ftpluginsを有効にする
 " .vim/ftplugin/hoge.vim でファイルタイプがhogeの場合のみロードされるようにする
@@ -54,4 +70,7 @@ set directory=~/.vim/tmp
 set backupdir=~/.vim/backup
 
 " clipboard
-set clipboard=unnamed
+set clipboard=unnamed,autoselect
+
+
+
