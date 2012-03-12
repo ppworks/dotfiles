@@ -10,6 +10,8 @@ call vundle#rc()
 " vim-scripts repos
 Bundle 'rails.vim'
 Bundle "git://github.com/scrooloose/nerdtree.git"
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'Shougo/neocomplcache'
 
 filetype plugin indent on
 
@@ -19,6 +21,23 @@ if has('vim_starting') &&  file_name == ""
   autocmd VimEnter * NERDTree ./
 endif
 let NERDTreeSplitVertical=0
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+function InsertTabWrapper()
+    if pumvisible()
+        return "\<c-n>"
+    endif
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k\|<\|/'
+        return "\<tab>"
+    elseif exists('&omnifunc') && &omnifunc == ''
+        return "\<c-n>"
+    else
+        return "\<c-x>\<c-o>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " syntaxを有効化
 syntax on
