@@ -1,0 +1,9 @@
+[user]
+    name = koshikawa
+    email = koshikawa@ppworks.jp
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
