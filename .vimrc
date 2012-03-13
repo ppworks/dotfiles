@@ -13,6 +13,8 @@ Bundle "scrooloose/nerdtree"
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'cakebaker/scss-syntax.vim'
 
 filetype plugin indent on
 
@@ -74,6 +76,14 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 
+
+" coffee
+"au BufRead,BufNewFile *.coffee set filetype=coffee
+
+" scss
+"au BufRead,BufNewFile *.scss set filetype=scss
+
+""""""
 " syntaxを有効化
 syntax on
 
