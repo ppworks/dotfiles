@@ -42,6 +42,10 @@ function InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
+" key bind
+nmap <Space>b :ls<CR>:buffer 
+nmap <Space>ls :ls<CR>
+
 " syntaxを有効化
 syntax on
 
