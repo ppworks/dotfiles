@@ -85,5 +85,15 @@ set backupdir=~/.vim/backup
 " clipboard
 set clipboard=unnamed,autoselect
 
+" mouse
+set mouse=a
+set ttymouse=xterm2
 
+" バックスペースでインデントや改行を削除できるようにする
+set backspace=2
+
+" 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
+set showmatch
+" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+set wildmenu
 
