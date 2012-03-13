@@ -16,6 +16,13 @@ Bundle 'Shougo/neocomplcache'
 filetype plugin indent on
 
 " plugin setting
+" rails
+let g:rails_level=4
+au FileType ruby  :set nowrap tabstop=2 tw=0 sw=2 expandtab
+au FileType eruby :set nowrap tabstop=2 tw=0 sw=2 expandtab
+au FileType coffee :set nowrap tabstop=2 tw=0 sw=2 expandtab
+au FileType scss :set nowrap tabstop=2 tw=0 sw=2 expandtab
+
 " NEARDTree
 autocmd vimenter * if !argc() | NERDTree | endif
 au BufRead,BufNewFile *.scss set filetype=scss
