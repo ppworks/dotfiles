@@ -9,18 +9,21 @@ call vundle#rc()
 " bundle
 " vim-scripts repos
 Bundle 'rails.vim'
-Bundle "git://github.com/scrooloose/nerdtree.git"
+Bundle "scrooloose/nerdtree"
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Shougo/neocomplcache'
 
 filetype plugin indent on
 
 " plugin setting
-let file_name = expand("%")
-if has('vim_starting') &&  file_name == ""
-  autocmd VimEnter * NERDTree ./
-endif
-let NERDTreeSplitVertical=0
+" NEARDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+au BufRead,BufNewFile *.scss set filetype=scss
+au BufRead,BufNewFile *.coffee set filetype=coffee
+let g:NERDChristmasTree = 1
+let g:NERDTreeIgnore=['\.svn']
+let g:NERDTreeShowHidden=1
+let g:NERDTreeSplitVertical=0
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
@@ -59,15 +62,6 @@ set laststatus=2
 
 " status lineへ文字コード 改行コードを表示
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-
-" nowrap
-"set nowrap
-
-" ftpluginsを有効にする
-" .vim/ftplugin/hoge.vim でファイルタイプがhogeの場合のみロードされるようにする
-filetype plugin on
-
-filetype indent on
 
 " tab
 set tabstop=8
