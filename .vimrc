@@ -98,6 +98,16 @@ set backspace=2
 
 " 括弧入力時に対応する括弧を表示 (noshowmatch:表示しない)
 set showmatch
+
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
+"変更中のファイルでも、保存しないで他のファイルを表示
+set hidden
+
+"インクリメンタルサーチを行う
+set incsearch
+
+"タブ文字、行末など不可視文字を表示する
+set list
+set listchars=tab:^_
