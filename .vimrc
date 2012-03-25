@@ -8,6 +8,8 @@ call vundle#rc()
 
 " bundle
 " vim-scripts repos
+
+Bundle 'vundle'
 Bundle 'rails.vim'
 Bundle "scrooloose/nerdtree"
 Bundle 'vim-ruby/vim-ruby'
@@ -79,7 +81,6 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 " oで開く
 au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
 au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
-
 
 
 " coffee
