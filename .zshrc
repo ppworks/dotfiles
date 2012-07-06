@@ -95,23 +95,28 @@ setopt hist_ignore_dups
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-
 # alias
 alias ls="ls -G"
-#alias ls='ls --color=tty'
 alias ll='ls -la'
 alias vi='/usr/bin/vim'
-alias gls="gls --color"
 alias editor='vim'
 
 # sbinにもpath通す
-export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:${PATH}
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:$PATH
 
 # perlbrew
-export PATH="${PATH}:/Users/koshikawa/perl5/perlbrew"
-source /Users/koshikawa/perl5/perlbrew/etc/bashrc
+if [ -s $HOME/perl5/perlbrew ]; then
+    export PATH="$PATH:$HOME/perl5/perlbrew"
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
 
 
 # mac
-alias dnsclear='dscacheutil -flushcache'
+if [ `uname` = "Darwin" ]; then
+    alias dnsclear='dscacheutil -flushcache'
+fi
 
+# rvm
+if [ -s $HOME/.rvm/bin ]; then
+    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
