@@ -1,14 +1,21 @@
+[core]
+    editor = vim
 [user]
     name = koshikawa
     email = koshikawa@ppworks.jp
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    interactive = auto
+    ui = auto
 [github]
     user = ppworks
 [alias]
+    co = checkout
     st = status -s -b
-    ll = log --graph --pretty --decorate
-    df = diff --staged
+    ll = log --graph --decorate --date=short --pretty
+    ln = log --graph --decorate --date=short --pretty --name-status
+    stat = log --stat --summary
+    wh = whatchanged
+    df = diff 
+    ds = diff --staged
+    gr = grep -n
+[pull]
+    rebase = true
