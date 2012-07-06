@@ -1,5 +1,6 @@
 [core]
     editor = vim
+    pager = less -R
 [user]
     name = koshikawa
     email = koshikawa@ppworks.jp
@@ -17,5 +18,8 @@
     df = diff 
     ds = diff --staged
     gr = grep -n
+    rank = shortlog -s -n --no-merges
+    amend = commit --amend
+    ammend = amend
 [pull]
     rebase = true
