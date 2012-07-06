@@ -8,3 +8,7 @@
     interactive = auto
 [github]
     user = ppworks
+[alias]
+    st = status -s -b
+    ll = log --graph --pretty --decorate
+    df = diff --staged
