@@ -6,4 +6,5 @@
     status = auto
     branch = auto
     interactive = auto
-
+[github]
+    user = ppworks
