@@ -3,6 +3,9 @@ export LANG=ja_JP.UTF-8
 # homebrewを優先
 export PATH=/usr/local/bin:$PATH
 
+# homedirectoryを優先
+export PATH=$HOME/bin:$PATH
+
 # editor
 export EDITOR=vim
 
