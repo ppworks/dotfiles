@@ -98,12 +98,6 @@ setopt hist_ignore_dups
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
-# alias
-alias ls="ls -G"
-alias ll='ls -la'
-alias vi='/usr/bin/vim'
-alias editor='vim'
-
 # sbinにもpath通す
 export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/usr/local/sbin:$PATH
 
@@ -116,10 +110,20 @@ fi
 
 # mac
 if [ `uname` = "Darwin" ]; then
+    # dns
     alias dnsclear='dscacheutil -flushcache'
 fi
 
 # rvm
 if [ -s $HOME/.rvm/bin ]; then
     PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+fi
+
+# alias
+alias ls="ls -G"
+alias ll='ls -la'
+alias vi='/usr/bin/vim'
+alias editor='vim'
+if whence ack > /dev/null; then
+    alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
