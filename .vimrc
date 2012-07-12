@@ -13,8 +13,9 @@ Bundle 'vundle'
 Bundle 'rails.vim'
 Bundle "scrooloose/nerdtree"
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'Shougo/neocomplcache'
+"Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
+Bundle 'basyura/unite-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
 
