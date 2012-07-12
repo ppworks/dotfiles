@@ -18,6 +18,7 @@ Bundle 'Shougo/unite.vim'
 Bundle 'basyura/unite-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'tpope/vim-endwise'
 
 filetype plugin indent on
 
