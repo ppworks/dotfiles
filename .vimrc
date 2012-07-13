@@ -10,7 +10,7 @@ call vundle#rc()
 " vim-scripts repos
 
 Bundle 'vundle'
-Bundle 'rails.vim'
+Bundle 'tpope/vim-rails'
 Bundle "scrooloose/nerdtree"
 Bundle 'vim-ruby/vim-ruby'
 "Bundle 'Shougo/neocomplcache'
