@@ -35,7 +35,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.coffee set filetype=coffee
 let g:NERDChristmasTree = 1
-let g:NERDTreeIgnore=['\.svn']
+let g:NERDTreeIgnore=['\.svn', '\.git']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeSplitVertical=0
 
