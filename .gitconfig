@@ -9,6 +9,7 @@
 [github]
     user = ppworks
 [alias]
+    a = add 
     co = checkout
     st = status -s -b
     ll = log --graph --decorate --date=short --pretty
