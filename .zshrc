@@ -127,3 +127,7 @@ alias editor='vim'
 if whence ack > /dev/null; then
     alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
+if whence pg_ctl > /dev/null; then
+    alias pg.start="pg_ctl -D /usr/local/var/postgres -l logfile start"
+    alias pg.stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+fi
