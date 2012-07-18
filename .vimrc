@@ -12,6 +12,7 @@ call vundle#rc()
 Bundle 'vundle'
 Bundle 'tpope/vim-rails'
 Bundle "scrooloose/nerdtree"
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'vim-ruby/vim-ruby'
 "Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/unite.vim'
@@ -35,7 +36,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.coffee set filetype=coffee
 let g:NERDChristmasTree = 1
-let g:NERDTreeIgnore=['\.svn', '\.git']
+let g:NERDTreeIgnore=['\.svn']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeSplitVertical=0
 
@@ -85,12 +86,6 @@ au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
 au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
 
 
-" coffee
-"au BufRead,BufNewFile *.coffee set filetype=coffee
-
-" scss
-"au BufRead,BufNewFile *.scss set filetype=scss
-
 """"""
 " syntaxを有効化
 syntax on
@@ -98,19 +93,6 @@ syntax on
 " カラースキーマを設定
 set t_Co=256
 colorscheme candycode
-
-" カーソル行をハイライト
-set cursorline
-" カレントウィンドウにのみ罫線を引く
-augroup cch
-autocmd! cch
-autocmd WinLeave * set nocursorline
-autocmd WinEnter,BufRead * set cursorline
-augroup END
-
-hi clear CursorLine
-hi CursorLine gui=underline
-hi CursorLine term=reverse cterm=none ctermbg=242
 
 " 行番号の表示
 set number
