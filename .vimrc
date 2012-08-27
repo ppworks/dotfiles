@@ -20,6 +20,7 @@ Bundle 'basyura/unite-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-surround'
 
 filetype plugin indent on
 
