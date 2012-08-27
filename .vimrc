@@ -22,6 +22,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'edsono/vim-matchit'
 
 filetype plugin indent on
 
