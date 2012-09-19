@@ -42,6 +42,7 @@ let g:NERDChristmasTree = 1
 let g:NERDTreeIgnore=['\.svn']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeSplitVertical=0
+noremap <silent> <C-t> :<C-u>:NERDTreeToggle<CR>
 
 " neocomplcache
 let g:neocomplcache_enable_at_startup = 1
