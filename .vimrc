@@ -23,6 +23,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'edsono/vim-matchit'
+Bundle 'kana/vim-altr'
 
 filetype plugin indent on
 
@@ -89,6 +90,16 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
 au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
 
+" vim-altr
+" vim-altr {{{
+nmap <F3> <Plug>(altr-forward)
+nmap <F2> <Plug>(altr-back)
+" For ruby tdd
+call altr#define('%.rb', 'spec/%_spec.rb')
+" For rails tdd
+call altr#define('app/models/%.rb', 'spec/models/%_spec.rb', 'spec/factories/%s.rb')
+call altr#define('app/controllers/%.rb', 'spec/controllers/%_spec.rb')
+call altr#define('app/helpers/%.rb', 'spec/helpers/%_spec.rb')
 
 """"""
 " syntaxを有効化
