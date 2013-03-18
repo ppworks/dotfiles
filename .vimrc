@@ -164,3 +164,7 @@ set incsearch
 "タブ文字、行末など不可視文字を表示する
 set list
 set listchars=tab:^_
+
+" vimの連続コピペできない問題
+" http://qiita.com/items/bd97a9b963dae40b63f5
+vnoremap <silent> <C-p> "0p<CR>
