@@ -26,6 +26,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'edsono/vim-matchit'
 Bundle 'kana/vim-altr'
 Bundle 'h1mesuke/unite-outline'
+Bundle 'kana/vim-altr'
 
 filetype plugin indent on
 
@@ -172,3 +173,10 @@ set listchars=tab:^_
 " vimの連続コピペできない問題
 " http://qiita.com/items/bd97a9b963dae40b63f5
 vnoremap <silent> <C-p> "0p<CR>
+
+" altr-back
+nmap <C-]> <Plug>(altr-back)
+call altr#define('%.rb', 'spec/%_spec.rb')
+call altr#define('app/models/%.rb', 'spec/models/%_spec.rb')
+call altr#define('app/controllers/%.rb', 'spec/controllers/%_spec.rb')
+call altr#define('app/helpers/%.rb', 'spec/helpers/%_spec.rb')
