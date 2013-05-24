@@ -92,8 +92,8 @@ au FileType unite inoremap <silent> <buffer> <expr> <C-l> unite#do_action('vspli
 au FileType unite nnoremap <silent> <buffer> <ESC><ESC> q
 au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 " oで開く
-au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
-au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
+"au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
+"au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
 
 " vim-altr
 " vim-altr {{{
