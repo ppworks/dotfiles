@@ -174,6 +174,8 @@ set listchars=tab:^_
 " http://qiita.com/items/bd97a9b963dae40b63f5
 vnoremap <silent> <C-p> "0p<CR>
 
+inoremap jj <Esc>
+
 " altr-back
 nmap <C-]> <Plug>(altr-back)
 call altr#define('%.rb', 'spec/%_spec.rb')
