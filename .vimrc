@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'edsono/vim-matchit'
 Bundle 'kana/vim-altr'
+Bundle 'h1mesuke/unite-outline'
 
 filetype plugin indent on
 
@@ -64,9 +65,11 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 
 " unite.vim
+"let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> <space>ub :<C-u>Unite buffer<CR>
 nnoremap <silent> <space>ll :<C-u>Unite buffer<CR>
+nnoremap <silent> <space>mm :<C-u>Unite outline<CR>
 " ファイル一覧
 nnoremap <silent> <space>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
 " レジスタ一覧
