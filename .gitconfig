@@ -22,3 +22,5 @@
     rank = shortlog -s -n --no-merges
     amend = commit --amend
     ammend = amend
+[rebase]
+    autosquash = true
