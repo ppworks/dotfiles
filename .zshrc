@@ -1,10 +1,10 @@
-export LANG=ja_JP.UTF-8 
+export LANG=ja_JP.UTF-8
 
 # homebrewを優先
 export PATH=/usr/local/bin:$PATH
 
 # homedirectoryを優先
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$HOME/local/bin:$PATH
 
 # editor
 export EDITOR=vim
@@ -21,15 +21,13 @@ compinit
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 
-
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-
 
 # 補完候補を詰めて表示
 setopt list_packed
 
 # 入力したコマンドを修正
-setopt correct 
+setopt correct
 
 # ファイル権限マスク
 umask 002
@@ -65,7 +63,7 @@ export LESS="-R"
 setopt auto_cd
 setopt auto_pushd
 setopt auto_remove_slash
-setopt pushd_ignore_dups 
+setopt pushd_ignore_dups
 
 # sudo
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
@@ -93,7 +91,7 @@ setopt hist_ignore_dups
 setopt hist_ignore_space
 setopt hist_verify
 setopt hist_no_store
-function history-all { history -E 1 } 
+function history-all { history -E 1 }
 setopt hist_ignore_dups
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
@@ -107,16 +105,10 @@ if [ -s $HOME/perl5/perlbrew ]; then
     source $HOME/perl5/perlbrew/etc/bashrc
 fi
 
-
 # mac
 if [ `uname` = "Darwin" ]; then
     # dns
     alias dnsclear='dscacheutil -flushcache'
-fi
-
-# rvm
-if [ -s $HOME/.rvm/bin ]; then
-    PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 fi
 
 # alias
@@ -124,6 +116,7 @@ alias ls="ls -G"
 alias ll='ls -la'
 alias vi='/usr/bin/vim'
 alias editor='vim'
+alias be='bundle exec'
 if whence ack > /dev/null; then
     alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
@@ -142,3 +135,8 @@ ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="vendor/bin:$PATH"
+eval "$(rbenv init -)"
