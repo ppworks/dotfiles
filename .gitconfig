@@ -24,3 +24,5 @@
     ammend = amend
 [rebase]
     autosquash = true
+[diff]
+    algorithm = histogram
