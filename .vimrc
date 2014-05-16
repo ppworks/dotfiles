@@ -17,6 +17,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neocomplcache-rsense'
 Bundle 'Shougo/unite.vim'
+Bundle 'Shougo/vimproc'
 Bundle 'basyura/unite-rails'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'cakebaker/scss-syntax.vim'
@@ -26,7 +27,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'edsono/vim-matchit'
 Bundle 'kana/vim-altr'
 Bundle 'h1mesuke/unite-outline'
-Bundle 'kana/vim-altr'
+Bundle 'fukajun/unite-actions'
+Bundle 'taka84u9/unite-git'
+Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on
 
@@ -39,7 +42,7 @@ au FileType coffee :set nowrap tabstop=2 tw=0 sw=2 expandtab
 au FileType scss :set nowrap tabstop=2 tw=0 sw=2 expandtab
 
 " NEARDTree
-autocmd vimenter * if !argc() | NERDTree | endif
+"autocmd vimenter * if !argc() | NERDTree | endif
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.coffee set filetype=coffee
 let g:NERDChristmasTree = 1
@@ -69,7 +72,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> <space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <space>ll :<C-u>Unite buffer<CR>
+nnoremap <silent> <space>ll :<C-u>Unite buffer git_modified git_untracked file_mru file_rec -buffer-name=files<CR>
 nnoremap <silent> <space>mm :<C-u>Unite outline<CR>
 " ファイル一覧
 nnoremap <silent> <space>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
@@ -95,16 +98,28 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>q
 "au FileType unite noremap <silent> <buffer> <expr> o unite#do_action('open')
 "au FileType unite inoremap <silent> <buffer> <expr> o unite#do_action('open')
 
-" vim-altr
-" vim-altr {{{
-nmap <F3> <Plug>(altr-forward)
-nmap <F2> <Plug>(altr-back)
-" For ruby tdd
-call altr#define('%.rb', 'spec/%_spec.rb')
-" For rails tdd
-call altr#define('app/models/%.rb', 'spec/models/%_spec.rb', 'spec/factories/%s.rb')
-call altr#define('app/controllers/%.rb', 'spec/controllers/%_spec.rb')
-call altr#define('app/helpers/%.rb', 'spec/helpers/%_spec.rb')
+let g:unite_source_actions = {
+            \ "Unite outline <space>mm" : "Unite outline",
+            \ }
+nnoremap <silent> <space>la :<C-u>Unite actions<CR>
+
+" unite-ag
+
+"" unite-grep {{{
+" unite-grepのバックエンドをagに切り替える
+" http://qiita.com/items/c8962f9325a5433dc50d
+let g:unite_source_grep_command = 'ag'
+let g:unite_source_grep_default_opts = '--nocolor --nogroup -U'
+let g:unite_source_grep_recursive_opt = ''
+let g:unite_source_grep_max_candidates = 200
+
+" unite-grepのキーマップ
+nnoremap <space>g :<C-u>Unite grep:./<CR>
+" 選択した文字列をunite-grep
+" https://github.com/shingokatsushima/dotfiles/blob/master/.vimrc
+vnoremap /g y:Unite grep:::<C-R>=escape(@", '\\.*$^[]')<CR><CR>
+" }}}
+
 
 """"""
 " syntaxを有効化
@@ -145,7 +160,7 @@ set directory=~/.vim/tmp
 set backupdir=~/.vim/backup
 
 " clipboard
-set clipboard=unnamed,autoselect
+set clipboard+=unnamed
 
 " mouse
 set mouse=a
@@ -182,3 +197,10 @@ call altr#define('%.rb', 'spec/%_spec.rb')
 call altr#define('app/models/%.rb', 'spec/models/%_spec.rb')
 call altr#define('app/controllers/%.rb', 'spec/controllers/%_spec.rb')
 call altr#define('app/helpers/%.rb', 'spec/helpers/%_spec.rb')
+call altr#define('app/authorizers/%.rb', 'spec/authorizers/%_spec.rb')
+call altr#define('app/mailers/%.rb', 'spec/mailers/%_spec.rb')
+
+nnoremap <silent> <space>d :<C-u>Gdiff<CR>
+
+" 行末の半角スペースを削除
+autocmd BufWritePre * :%s/\s\+$//e

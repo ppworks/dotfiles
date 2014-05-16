@@ -135,6 +135,7 @@ fi
 # face
 local user_host="%{$fg[yellow]%}%n%{$fg_bold[red]%}@%{$reset_color%}%{$fg[green]%}%m${blue_cp}"
 local smiley="%(?,%{$fg_bold[blue]%}|＾_＾|%{$reset_color%},%{$fg_bold[red]%}|＋_＋|%{$reset_color%})"
+
 PROMPT='${user_host}%{$fg_bold[red]%} ➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}
 ${smiley} '
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
