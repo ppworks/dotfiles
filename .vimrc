@@ -3,12 +3,6 @@ set nocompatible
 
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
-" bundle
-" vim-scripts repos
-
 if has('vim_starting')
   set nocompatible               " Be iMproved
 
