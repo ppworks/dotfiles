@@ -9,29 +9,62 @@ call vundle#rc()
 " bundle
 " vim-scripts repos
 
-Bundle 'vundle'
-Bundle 'tpope/vim-rails'
-Bundle "scrooloose/nerdtree"
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-rsense'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimproc'
-Bundle 'basyura/unite-rails'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'edsono/vim-matchit'
-Bundle 'kana/vim-altr'
-Bundle 'h1mesuke/unite-outline'
-Bundle 'fukajun/unite-actions'
-Bundle 'taka84u9/unite-git'
-Bundle 'airblade/vim-gitgutter'
+if has('vim_starting')
+  set nocompatible               " Be iMproved
 
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" My Bundles here:
+NeoBundle 'vundle'
+NeoBundle 'tpope/vim-rails'
+NeoBundle "scrooloose/nerdtree"
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neocomplcache-rsense'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimproc', {
+  \ 'build' : {
+    \ 'windows' : 'make -f make_mingw32.mak',
+    \ 'cygwin' : 'make -f make_cygwin.mak',
+    \ 'mac' : 'make -f make_mac.mak',
+    \ 'unix' : 'make -f make_unix.mak',
+  \ },
+  \ }
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'cakebaker/scss-syntax.vim'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'edsono/vim-matchit'
+NeoBundle 'kana/vim-altr'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'fukajun/unite-actions'
+NeoBundle 'taka84u9/unite-git'
+NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'altercation/vim-colors-solarized'
+
+" You can specify revision/branch/tag.
+NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+
+call neobundle#end()
+
+" Required:
 filetype plugin indent on
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
 
 " plugin setting
 " rails
@@ -127,7 +160,7 @@ syntax on
 
 " カラースキーマを設定
 set t_Co=256
-colorscheme candycode
+colorscheme solarized
 
 " 行番号の表示
 set number
