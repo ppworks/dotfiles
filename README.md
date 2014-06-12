@@ -14,18 +14,14 @@ ln -nsf ~/repository/github.com/ppworks/dotfiles/.gemrc .gemrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vim .vim
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vimrc .vimrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.tmux.conf .tmux.conf
-ln -nsf ~/repository/github.com/ppworks/dotfiles/.bundle ./.bundle
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.bundle .bundle
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.rspec .rspec
 ```
 
-# clone vundle
+# Neobundle
 
 ```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | sh
+mkdir -p ~/.vim/bundle
+git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
-
-# BundleInstall
-
-```
-:BundleInstall
-```
-
