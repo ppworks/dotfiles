@@ -156,16 +156,16 @@ vnoremap /g y:Unite grep:::<C-R>=escape(@", '\\.*$^[]')<CR><CR>
 
 """"""
 " syntaxを有効化
-syntax on
-
+syntax enable
 " カラースキーマを設定
 set t_Co=256
+set background=dark
 colorscheme solarized
 
 " 行番号の表示
 set number
 set ruler
-hi LineNr ctermfg=darkgrey ctermbg=black
+hi LineNr ctermfg=lightgray ctermbg=none
 
 " status lineの表示
 set laststatus=2
