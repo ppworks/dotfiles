@@ -15,7 +15,7 @@ setopt no_beep
 
 # 補完機能
 autoload -U compinit
-compinit
+compinit -u
 
 # ls color
 export LSCOLORS=exfxcxdxbxegedabagacad
