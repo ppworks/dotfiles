@@ -26,6 +26,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc', {
   \ 'build' : {
     \ 'windows' : 'make -f make_mingw32.mak',
@@ -99,7 +100,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> <space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <space>ll :<C-u>Unite buffer git_modified git_untracked file_mru file_rec -buffer-name=files<CR>
+nnoremap <silent> <space>ll :<C-u>Unite buffer git_modified git_untracked file_mru -buffer-name=files<CR>
 nnoremap <silent> <space>mm :<C-u>Unite outline<CR>
 " ファイル一覧
 nnoremap <silent> <space>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
