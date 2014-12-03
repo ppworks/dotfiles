@@ -117,6 +117,9 @@ alias ll='ls -la'
 alias vi='/usr/bin/vim'
 alias editor='vim'
 alias be='bundle exec'
+alias diff='colordiff --side-by-side --suppress-common-lines'
+alias less='less -R'
+alias ag='ag -S'
 if whence ack > /dev/null; then
     alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
@@ -140,3 +143,9 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="vendor/bin:$PATH"
 eval "$(rbenv init -)"
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+# zsh: no matches found を防ぐ
+setopt nonomatch
