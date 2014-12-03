@@ -48,6 +48,8 @@ NeoBundle 'fukajun/unite-actions'
 NeoBundle 'taka84u9/unite-git'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'scrooloose/syntastic'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -232,3 +234,6 @@ nnoremap <silent> <space>d :<C-u>Gdiff<CR>
 
 " 行末の半角スペースを削除
 autocmd BufWritePre * :%s/\s\+$//e
+" 改行をLF
+set fileformat=unix
+call neobundle#end()
