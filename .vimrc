@@ -50,6 +50,7 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'slim-template/vim-slim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }

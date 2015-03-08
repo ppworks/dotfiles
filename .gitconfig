@@ -1,6 +1,7 @@
 [core]
     editor = vim
     pager = less -R
+    excludesfile = /Users/koshikawa/.gitignore
 [user]
     name = koshikawa
     email = koshikawa@ppworks.jp
@@ -9,14 +10,14 @@
 [github]
     user = ppworks
 [alias]
-    a = add 
+    a = add
     co = checkout
     st = status -s -b
     ll = log --graph --decorate --date=short --pretty
     ln = log --graph --decorate --date=short --pretty --name-status
     stat = log --stat --summary
     wh = whatchanged
-    df = diff 
+    df = diff
     ds = diff --staged
     gr = grep -n
     rank = shortlog -s -n --no-merges
@@ -26,3 +27,5 @@
     autosquash = true
 [diff]
     algorithm = histogram
+[gc]
+    auto = 0
