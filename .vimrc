@@ -51,6 +51,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'othree/yajs.vim'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -76,6 +77,7 @@ au FileType scss :set nowrap tabstop=2 tw=0 sw=2 expandtab
 "autocmd vimenter * if !argc() | NERDTree | endif
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.coffee set filetype=coffee
+au BufRead,BufNewFile *.es6 set filetype=javascript
 let g:NERDChristmasTree = 1
 let g:NERDTreeIgnore=['\.svn']
 let g:NERDTreeShowHidden=1
