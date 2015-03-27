@@ -2,4 +2,4 @@
 BUNDLE_PATH: "./vendor/bundle"
 BUNDLE_WITHOUT: production:staging
 BUNDLE_BIN: "./vendor/bin"
-BUNDLE_BUILD__NOKOGIRI: --use-system-libraries --with-iconv-dir=/usr/local/opt/libiconv  --with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config --with-xslt-config=/usr/local/opt/libxslt/bin/xslt-config
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-iconv-dir=/usr/local/opt/libiconv --with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config --with-xslt-config=/usr/local/opt/libxslt/bin/xslt-config"
