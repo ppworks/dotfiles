@@ -46,7 +46,6 @@ NeoBundle 'kana/vim-altr'
 NeoBundle 'h1mesuke/unite-outline'
 NeoBundle 'fukajun/unite-actions'
 NeoBundle 'taka84u9/unite-git'
-NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'scrooloose/syntastic'
@@ -105,7 +104,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 "let g:unite_enable_start_insert=1
 " バッファ一覧
 nnoremap <silent> <space>ub :<C-u>Unite buffer<CR>
-nnoremap <silent> <space>ll :<C-u>Unite buffer git_modified git_untracked file_mru -buffer-name=files<CR>
+nnoremap <silent> <space>ll :<C-u>Unite buffer git_modified file_mru -buffer-name=files<CR>
 nnoremap <silent> <space>mm :<C-u>Unite outline<CR>
 " ファイル一覧
 nnoremap <silent> <space>uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
