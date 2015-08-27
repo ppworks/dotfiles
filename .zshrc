@@ -149,3 +149,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # zsh: no matches found を防ぐ
 setopt nonomatch
+
+# direnv
+# https://github.com/direnv/direnv
+eval "$(direnv hook zsh)"
