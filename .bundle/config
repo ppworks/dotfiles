@@ -1,7 +1,7 @@
 ---
 BUNDLE_PATH: "./vendor/bundle"
 BUNDLE_WITHOUT: production:staging
-BUNDLE_BIN: "./vendor/bin'
+BUNDLE_BIN: "./vendor/bin"
 BUNDLE_GEM__COC: 'false'
 BUNDLE_GEM__MIT: 'false'
 BUNDLE_GEM__TEST: rspec
