@@ -1,5 +1,8 @@
 ---
 BUNDLE_PATH: "./vendor/bundle"
 BUNDLE_WITHOUT: production:staging
-BUNDLE_BIN: "./vendor/bin"
-BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries --with-iconv-dir=/usr/local/opt/libiconv --with-xml2-config=/usr/local/opt/libxml2/bin/xml2-config --with-xslt-config=/usr/local/opt/libxslt/bin/xslt-config"
+BUNDLE_BIN: "./vendor/bin'
+BUNDLE_GEM__COC: 'false'
+BUNDLE_GEM__MIT: 'false'
+BUNDLE_GEM__TEST: rspec
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
