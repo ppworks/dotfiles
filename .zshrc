@@ -153,3 +153,6 @@ setopt nonomatch
 # direnv
 # https://github.com/direnv/direnv
 eval "$(direnv hook zsh)"
+
+# got
+export GOPATH="$HOME/.go"
