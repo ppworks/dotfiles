@@ -2,8 +2,9 @@
     editor = vim
     pager = less -R
     excludesfile = /Users/koshikawa/.gitignore
+    compression = 0
 [user]
-    name = koshikawa
+    name = ppworks
     email = koshikawa@ppworks.jp
 [color]
     ui = auto
@@ -29,3 +30,10 @@
     algorithm = histogram
 [gc]
     auto = 0
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[merge "mergepbx"]
+	name = Xcode project files merger
+	driver = mergepbx %O %A %B

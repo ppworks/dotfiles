@@ -1,9 +1,0 @@
----
-BUNDLE_PATH: "./vendor/bundle"
-BUNDLE_WITHOUT: production:staging
-BUNDLE_BIN: "./vendor/bin"
-BUNDLE_GEM__COC: 'false'
-BUNDLE_GEM__MIT: 'false'
-BUNDLE_GEM__TEST: rspec
-BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
-BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"

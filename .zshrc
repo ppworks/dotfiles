@@ -150,13 +150,28 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # zsh: no matches found を防ぐ
 setopt nonomatch
 
-# direnv
-# https://github.com/direnv/direnv
+ulimit -n 1024
 eval "$(direnv hook zsh)"
 
-# got
+# go
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 
 # ghq
 export GHQ_ROOT="$HOME/repository"
+
+# docker-machine
+eval $(docker-machine env dev)
+
+# bundler
+export BUNDLE_PATH=./vendor/bundle
+export BUNDLE_WITHOUT=production:staging
+export BUNDLE_BIN=./vendor/bin
+export BUNDLE_GEM__COC=false
+export BUNDLE_GEM__MIT=false
+export BUNDLE_GEM__TEST=rspec
+export BUNDLE_BUILD__NOKOGIRI="--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
+export BUNDLE_BUILD__EVENTMACHINE="--with-cppflags=-I/usr/local/opt/openssl/include"
+export BUNDLE_BUILD__LIBV8=--with-system-v8
+export BUNDLE_JOBS=`expr $(sysctl -n hw.ncpu) - 1`
+export BUNDLE_RETRY=3
