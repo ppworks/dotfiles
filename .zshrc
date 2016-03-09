@@ -175,3 +175,8 @@ export BUNDLE_BUILD__EVENTMACHINE="--with-cppflags=-I/usr/local/opt/openssl/incl
 export BUNDLE_BUILD__LIBV8=--with-system-v8
 export BUNDLE_JOBS=`expr $(sysctl -n hw.ncpu) - 1`
 export BUNDLE_RETRY=3
+
+# npm
+if [ -d ${HOME}/node_modules/.bin ]; then
+    export PATH=${PATH}:${HOME}/node_modules/.bin
+fi
