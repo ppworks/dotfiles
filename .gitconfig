@@ -37,3 +37,6 @@
 [merge "mergepbx"]
 	name = Xcode project files merger
 	driver = mergepbx %O %A %B
+[commit]
+    template=/Users/koshikawa/.commit_template
+
