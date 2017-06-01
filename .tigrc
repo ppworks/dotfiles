@@ -1,0 +1,5 @@
+# 画面を常に垂直方向に分割する
+set vertical-split = no
+
+# 水平分割したウィンドウの下画面サイズを % で指定（行数指定も可）
+set split-view-height = 80%
