@@ -128,21 +128,41 @@ if whence pg_ctl > /dev/null; then
     alias pg.stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 fi
 
+alias ehead='grunt server --gruntfile /Users/koshikawa/repository/github.com/mobz/elasticsearch-head/Gruntfile.js'
+
+# http://qiita.com/takc923/items/45386905f70fde9af0e7
+alias brew="env PATH=${PATH/${HOME}\/\.pyenv\/shims:/} brew"
+
 # face
 local user_host="%{$fg[yellow]%}%n%{$fg_bold[red]%}@%{$reset_color%}%{$fg[green]%}%m${blue_cp}"
 local smiley="%(?,%{$fg_bold[blue]%}|＾_＾|%{$reset_color%},%{$fg_bold[red]%}|＋_＋|%{$reset_color%})"
 
-PROMPT='${user_host}%{$fg_bold[red]%} ➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%}
+PROMPT='${user_host}%{$fg_bold[red]%} ➜ %{$fg_bold[green]%}%p %{$fg[cyan]%}%~ %{$fg_bold[blue]%}%{$fg_bold[blue]%} % %{$reset_color%} [%D{%F %T}]
 ${smiley} '
 ZSH_THEME_GIT_PROMPT_PREFIX="git:(%{$fg[red]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 
+# phpenv
+if [ -d ${HOME}/.phpenv/bin ]; then
+    export PHPENV_ROOT="$HOME/.phpenv"
+    export PATH="$PHPENV_ROOT/bin:$PATH"
+    eval "$(phpenv init -)"
+fi
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="vendor/bin:$PATH"
 eval "$(rbenv init -)"
+
+# npm
+if [ -d ${HOME}/node_modules/.bin ]; then
+    export PATH=${PATH}:${HOME}/node_modules/.bin
+fi
+
+# yarn
+export PATH="$PATH:`yarn global bin`"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -161,7 +181,7 @@ export PATH="$GOPATH/bin:$PATH"
 export GHQ_ROOT="$HOME/repository"
 
 # docker-machine
-eval $(docker-machine env dev)
+#eval $(docker-machine env dev)
 
 # bundler
 export BUNDLE_PATH=./vendor/bundle
@@ -173,10 +193,8 @@ export BUNDLE_GEM__TEST=rspec
 export BUNDLE_BUILD__NOKOGIRI="--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
 export BUNDLE_BUILD__EVENTMACHINE="--with-cppflags=-I/usr/local/opt/openssl/include"
 export BUNDLE_BUILD__LIBV8=--with-system-v8
-export BUNDLE_JOBS=`expr $(sysctl -n hw.ncpu) - 1`
+export BUNDLE_JOBS=32 #`expr $(sysctl -n hw.ncpu) - 1`
 export BUNDLE_RETRY=3
 
-# npm
-if [ -d ${HOME}/node_modules/.bin ]; then
-    export PATH=${PATH}:${HOME}/node_modules/.bin
-fi
+# curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
