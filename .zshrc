@@ -120,6 +120,7 @@ alias be='bundle exec'
 alias diff='colordiff --side-by-side --suppress-common-lines'
 alias less='less -R'
 alias ag='ag -S'
+alias chrome-headless='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --headless --remote-debugging-port=9222 --disable-gpu --crash-dumps-dir=/tmp'
 if whence ack > /dev/null; then
     alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
