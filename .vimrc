@@ -51,6 +51,7 @@ NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'othree/yajs.vim'
+NeoBundle 'kana/vim-fakeclip.git'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
