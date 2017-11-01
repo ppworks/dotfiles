@@ -26,6 +26,7 @@
     ammend = amend
 [rebase]
     autosquash = true
+    autostash = true
 [diff]
     algorithm = histogram
 [gc]
