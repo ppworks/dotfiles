@@ -40,4 +40,6 @@
 	driver = mergepbx %O %A %B
 [commit]
     template=/Users/koshikawa/.commit_template
-
+[pager]
+    branch=cat
+    status=cat
