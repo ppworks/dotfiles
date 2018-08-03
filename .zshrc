@@ -134,6 +134,12 @@ alias ehead='grunt server --gruntfile /Users/koshikawa/repository/github.com/mob
 # http://qiita.com/takc923/items/45386905f70fde9af0e7
 alias brew="env PATH=${PATH/${HOME}\/\.pyenv\/shims:/} brew"
 
+alias d="docker"
+alias d-c="docker-compose"
+
+alias git-sync="git checkout master && git pull --rebase origin master && git branch --merged | grep -v master | xargs git branch -d && git fetch --prune"
+alias clean-rails-logs="rm log/*.log"
+
 # face
 local user_host="%{$fg[yellow]%}%n%{$fg_bold[red]%}@%{$reset_color%}%{$fg[green]%}%m${blue_cp}"
 local smiley="%(?,%{$fg_bold[blue]%}|＾_＾|%{$reset_color%},%{$fg_bold[red]%}|＋_＋|%{$reset_color%})"
@@ -175,8 +181,9 @@ ulimit -n 1024
 eval "$(direnv hook zsh)"
 
 # go
-export GOPATH="$HOME/.go"
-export PATH="$GOPATH/bin:$PATH"
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
 
 # ghq
 export GHQ_ROOT="$HOME/repository"
