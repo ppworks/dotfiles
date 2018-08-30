@@ -137,7 +137,6 @@ alias brew="env PATH=${PATH/${HOME}\/\.pyenv\/shims:/} brew"
 alias d="docker"
 alias d-c="docker-compose"
 
-alias git-sync="git checkout master && git pull --rebase origin master && git branch --merged | grep -v master | xargs git branch -d && git fetch --prune"
 alias clean-rails-logs="rm log/*.log"
 
 # face
