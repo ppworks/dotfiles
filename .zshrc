@@ -138,6 +138,7 @@ alias d="docker"
 alias d-c="docker-compose"
 
 alias clean-rails-logs="rm log/*.log"
+alias clean-dsstore="find . -name '.DS_Store' -type f -ls -delete"
 
 # face
 local user_host="%{$fg[yellow]%}%n%{$fg_bold[red]%}@%{$reset_color%}%{$fg[green]%}%m${blue_cp}"
