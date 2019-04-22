@@ -3,12 +3,12 @@ set nocompatible
 
 filetype off
 
-if has('vim_starting')
+if &compatible
   set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+" Required:
+set runtimepath+=~/.vim/bundle/neobundle.vim/
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
@@ -239,4 +239,3 @@ nnoremap <silent> <space>d :<C-u>Gdiff<CR>
 autocmd BufWritePre * :%s/\s\+$//e
 " 改行をLF
 set fileformat=unix
-call neobundle#end()
