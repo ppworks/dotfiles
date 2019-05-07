@@ -68,17 +68,6 @@ setopt pushd_ignore_dups
 # sudo
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin
 
-# git branch
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-RPROMPT="%1(v|%F${GREEN}%1v%f|)"
-
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
@@ -121,6 +110,7 @@ alias diff='colordiff --side-by-side --suppress-common-lines'
 alias less='less -R'
 alias ag='ag -S'
 alias chrome-headless='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --headless --remote-debugging-port=9222 --disable-gpu --crash-dumps-dir=/tmp'
+alias rspec="nocorrect rspec"
 if whence ack > /dev/null; then
     alias a="ack -a --ignore-dir=log --ignore-dir=tmp --ignore-dir=.bundle --pager=less"
 fi
@@ -168,6 +158,8 @@ if [ -d ${HOME}/node_modules/.bin ]; then
     export PATH=${PATH}:${HOME}/node_modules/.bin
 fi
 
+export PATH=${PATH}:./node_modules/.bin
+
 # yarn
 export PATH="$PATH:`yarn global bin`"
 
@@ -208,3 +200,28 @@ export BUNDLE_RETRY=3
 
 # curl
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+
+# git branch
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+RPROMPT="%1(v|%F${GREEN}%1v%f|)"
+
+precmd() {
+    # For hyper-tab-icons-plus
+    pwd=$(pwd)
+    cwd=${pwd##*/}
+    print -Pn "\e]0;$cwd\a"
+
+    # For git branch
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+
+preexec() {
+    printf "\033]0;%s\a" "${1%% *} | $cwd"
+}
+
+
