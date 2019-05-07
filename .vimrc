@@ -56,6 +56,7 @@ NeoBundle 'kana/vim-fakeclip.git'
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
+
 call neobundle#end()
 
 " Required:
@@ -236,6 +237,6 @@ call altr#define('app/mailers/%.rb', 'spec/mailers/%_spec.rb')
 nnoremap <silent> <space>d :<C-u>Gdiff<CR>
 
 " 行末の半角スペースを削除
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 " 改行をLF
 set fileformat=unix
