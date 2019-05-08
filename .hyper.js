@@ -156,7 +156,7 @@ module.exports = {
   plugins: [
     'hyper-solarized-dark',
     'hyper-opacity',
-    'hyper-tab-icons-plus',
+    'hyper-tabs-enhanced',
     'hyper-statusline',
     'hypercwd', // new tab で Current directory を開く
   ],
