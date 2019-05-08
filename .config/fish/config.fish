@@ -16,3 +16,11 @@ end
 # development
 set -x PATH ./bin $PATH
 
+# alias
+alias ls='ls -G'
+alias ll='ls -la'
+alias vi='/usr/bin/vim'
+alias be='bundle exec'
+alias diff='colordiff --side-by-side --suppress-common-lines'
+alias less='less -R'
+
