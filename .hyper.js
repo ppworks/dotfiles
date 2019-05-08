@@ -141,6 +141,10 @@ module.exports = {
 
     // for advanced config flags please refer to https://hyper.is/#cfg
     modifierKeys: { altIsMeta: true },
+
+    hyperStatusLine: {
+      footerTransparent: false,
+    },
   },
 
   // a list of plugins to fetch and install from npm
@@ -153,6 +157,7 @@ module.exports = {
     'hyper-solarized-dark',
     'hyper-opacity',
     'hyper-tab-icons-plus',
+    'hyper-statusline',
     'hypercwd', // new tab で Current directory を開く
   ],
 
