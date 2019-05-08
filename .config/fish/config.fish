@@ -2,6 +2,19 @@
 set -x PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and source (rbenv init -|psub)
 
+# bundler
+set -x BUNDLE_PATH ./vendor/bundle
+set -x BUNDLE_WITHOUT production:staging
+set -x BUNDLE_BIN ./vendor/bin
+set -x BUNDLE_GEM__COC false
+set -x BUNDLE_GEM__MIT false
+set -x BUNDLE_GEM__TEST rspec
+set -x BUNDLE_BUILD__NOKOGIRI "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
+set -x BUNDLE_BUILD__EVENTMACHINE "--with-cppflags=-I/usr/local/opt/openssl/include"
+set -x BUNDLE_BUILD__LIBV8 --with-system-v8
+set -x BUNDLE_JOBS 32
+set -x BUNDLE_RETRY 3
+
 # direnv
 eval (direnv hook fish)
 
