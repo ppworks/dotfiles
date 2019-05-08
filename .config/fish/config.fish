@@ -22,6 +22,9 @@ set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin:$PATH
 status --is-interactive; and source (goenv init -|psub)
 
+# npm
+set -x PATH node_modules/.bin/:$PATH
+
 # direnv
 eval (direnv hook fish)
 
