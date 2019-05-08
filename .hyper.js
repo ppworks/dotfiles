@@ -158,7 +158,10 @@ module.exports = {
     'hyper-opacity',
     'hyper-tabs-enhanced',
     'hyper-statusline',
-    'hypercwd', // new tab で Current directory を開く
+    // new tab で Current directory を開く
+    'hypercwd',
+    // alt+left/right arrow でタブをreordering
+    "hyperterm-tabs"
   ],
 
   // in development, you can create a directory under
