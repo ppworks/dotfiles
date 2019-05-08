@@ -15,6 +15,13 @@ set -x BUNDLE_BUILD__LIBV8 --with-system-v8
 set -x BUNDLE_JOBS 32
 set -x BUNDLE_RETRY 3
 
+# goenv
+set -x GOENV_ROOT $HOME/.goenv
+set -x PATH $GOENV_ROOT/bin:$PATH
+set -x GOPATH $HOME/go
+set -x PATH $GOPATH/bin:$PATH
+status --is-interactive; and source (goenv init -|psub)
+
 # direnv
 eval (direnv hook fish)
 
