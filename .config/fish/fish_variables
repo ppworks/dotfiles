@@ -8,9 +8,7 @@ SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
-SETUVAR _fish_abbr_be:bundle\x20exec
-SETUVAR _fish_abbr_diff:colordiff\x20\x2d\x2dside\x2dby\x2dside\x20\x2d\x2dsuppress\x2dcommon\x2dlines
-SETUVAR _fish_abbr_ll:ls\x20\x2dla
+SETUVAR _fish_abbr_chrome_2D_headless:/Applications/Google\x5c\x20Chrome\x2eapp/Contents/MacOS/Google\x5c\x20Chrome\x20\x2d\x2dheadless\x20\x2d\x2dremote\x2ddebugging\x2dport\x3d9222\x20\x2d\x2ddisable\x2dgpu\x20\x2d\x2dcrash\x2ddumps\x2ddir\x3d/tmp
 SETUVAR fish_color_autosuggestion:586e75
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:93a1a1
