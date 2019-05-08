@@ -8,14 +8,16 @@ git clone git@github.com:ppworks/dotfiles.git
 
 ```
 cd ~
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.config/fish .config/fish
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.config/powerline-shell .config/powerline-shell
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.gitconfig .gitconfig
-ln -nsf ~/repository/github.com/ppworks/dotfiles/.zshrc .zshrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.gemrc .gemrc
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.hyper.js .hyper.js
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.rspec .rspec
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.tigrc .tigrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vim .vim
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vimrc .vimrc
-ln -nsf ~/repository/github.com/ppworks/dotfiles/.tmux.conf .tmux.conf
-ln -nsf ~/repository/github.com/ppworks/dotfiles/.bundle .bundle
-ln -nsf ~/repository/github.com/ppworks/dotfiles/.rspec .rspec
+ln -nsf ~/repository/github.com/ppworks/dotfiles/bin bin
 ```
 
 # Neobundle
