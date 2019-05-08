@@ -12,3 +12,7 @@ set -x GHQ_ROOT $HOME/repository
 function fish_prompt
     powerline-shell --shell bare $status
 end
+
+# development
+set -x PATH ./bin $PATH
+
