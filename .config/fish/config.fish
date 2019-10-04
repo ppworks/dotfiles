@@ -14,6 +14,8 @@ set -x BUNDLE_BUILD__EVENTMACHINE "--with-cppflags=-I/usr/local/opt/openssl/incl
 set -x BUNDLE_BUILD__LIBV8 --with-system-v8
 set -x BUNDLE_JOBS 32
 set -x BUNDLE_RETRY 3
+set -x LDFLAGS "-L/usr/local/opt/libffi/lib"
+set -x PKG_CONFIG_PATH "/usr/local/opt/libffi/lib/pkgconfig"
 
 # goenv
 set -x GOENV_ROOT $HOME/.goenv
@@ -21,6 +23,9 @@ set -x PATH $GOENV_ROOT/bin:$PATH
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin:$PATH
 status --is-interactive; and source (goenv init -|psub)
+
+# nodebrew
+set -x PATH $HOME/.nodebrew/current/bin:$PATH
 
 # npm
 set -x PATH node_modules/.bin/:$PATH
