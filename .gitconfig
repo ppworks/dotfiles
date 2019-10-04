@@ -24,7 +24,7 @@
     rank = shortlog -s -n --no-merges
     amend = commit --amend
     ammend = amend
-    sync = !git checkout master && git pull --rebase origin master && git branch --merged | grep -v master | xargs git branch -d && git fetch --prune
+    sync = !git checkout master && git pull origin master && git branch --merged | grep -v master | xargs git branch -d && git fetch --prune
 [rebase]
     autosquash = true
     autostash = true
