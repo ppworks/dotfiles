@@ -117,6 +117,9 @@ module.exports = {
     // set to `false` for no bell
     bell: 'SOUND',
 
+    // The number of rows to be persisted in terminal buffer for scrolling
+    scrollback: 100000,
+
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
     copyOnSelect: true,
 
@@ -155,13 +158,12 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-solarized-dark',
-    'hyper-opacity',
-    'hyper-tabs-enhanced',
+    'hyper-tab-icons',
     'hyper-statusline',
     // new tab で Current directory を開く
     'hypercwd',
     // alt+left/right arrow でタブをreordering
-    "hyperterm-tabs"
+    'hyperterm-tabs'
   ],
 
   // in development, you can create a directory under
