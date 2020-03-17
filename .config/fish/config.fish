@@ -9,7 +9,7 @@ set -x BUNDLE_BIN ./vendor/bin
 set -x BUNDLE_GEM__COC false
 set -x BUNDLE_GEM__MIT false
 set -x BUNDLE_GEM__TEST rspec
-set -x BUNDLE_BUILD__NOKOGIRI "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/libxml2"
+set -x BUNDLE_BUILD__NOKOGIRI "--use-system-libraries=true --with-xml2-include=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include/libxml2"
 set -x BUNDLE_BUILD__EVENTMACHINE "--with-cppflags=-I/usr/local/opt/openssl/include"
 set -x BUNDLE_BUILD__LIBV8 --with-system-v8
 set -x BUNDLE_JOBS 32
