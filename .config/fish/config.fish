@@ -3,9 +3,7 @@ set -x PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and source (rbenv init -|psub)
 
 # bundler
-set -x BUNDLE_PATH ./vendor/bundle
 set -x BUNDLE_WITHOUT production:staging
-set -x BUNDLE_BIN ./vendor/bin
 set -x BUNDLE_GEM__COC false
 set -x BUNDLE_GEM__MIT false
 set -x BUNDLE_GEM__TEST rspec
