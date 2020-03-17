@@ -43,7 +43,8 @@ function fish_prompt
 end
 
 # development
-set -x PATH ./bin $PATH
+set -x PATH $HOME/bin:$PATH
+set -x PATH ./bin:$PATH
 
 # alias
 alias ls='ls -G'
