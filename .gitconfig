@@ -30,6 +30,7 @@
     autostash = true
 [diff]
     algorithm = histogram
+    colorMovedWS = ignore-space-change
 [gc]
     auto = 0
 [filter "lfs"]
