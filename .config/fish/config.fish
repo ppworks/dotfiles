@@ -26,7 +26,7 @@ status --is-interactive; and source (goenv init -|psub)
 set -x PATH $HOME/.nodebrew/current/bin:$PATH
 
 # pyenv
-status --is-interactive; and source (pyenv init -|psub)
+status is-login; and pyenv init --path | source
 
 # npm
 set -x PATH node_modules/.bin/:$PATH
