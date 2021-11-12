@@ -1,10 +1,6 @@
 # homebrew
 set -x PATH /opt/homebrew/bin $PATH
 
-# rbenv
-set -x PATH $HOME/.rbenv/bin $PATH
-status --is-interactive; and source (rbenv init -|psub)
-
 # bundler
 set -x BUNDLE_WITHOUT production:staging
 set -x BUNDLE_GEM__COC false

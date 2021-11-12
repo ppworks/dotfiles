@@ -2,7 +2,8 @@
 # VERSION: 3.0
 SETUVAR __fish_initialized:3100
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:/Users/koshikawa/\x2econfig/fish/functions/fisher\x2efish\x1e/Users/koshikawa/\x2econfig/fish/completions/fisher\x2efish
-SETUVAR _fisher_plugins:jorgebucaran/fisher
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1erbenv/fish\x2drbenv
+SETUVAR _fisher_rbenv_2F_fish_2D_rbenv_files:/Users/koshikawa/\x2econfig/fish/functions/rbenv\x2efish\x1e/Users/koshikawa/\x2econfig/fish/conf\x2ed/rbenv\x2efish\x1e/Users/koshikawa/\x2econfig/fish/completions/rbenv\x2efish
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:005fd7
@@ -30,3 +31,4 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR --export fish_user_paths:/Users/koshikawa/\x2erbenv/bin
