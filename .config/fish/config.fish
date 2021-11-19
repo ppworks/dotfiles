@@ -1,6 +1,9 @@
 # homebrew
 fish_add_path /opt/homebrew/bin
 
+# pg
+fish_add_path /opt/homebrew/opt/libpq/bin
+
 # rbenv
 set -x PATH $HOME/.rbenv/bin $PATH
 status --is-interactive; and source (rbenv init -|psub)
@@ -38,8 +41,8 @@ function fish_prompt
 end
 
 # development
-fish_add_path $HOME/bin
-fish_add_path ./bin
+set -x PATH $HOME/bin:$PATH
+set -x PATH ./bin:$PATH
 
 # alias
 alias ls='ls -G'
