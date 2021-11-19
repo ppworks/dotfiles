@@ -1,6 +1,10 @@
 # homebrew
 fish_add_path /opt/homebrew/bin
 
+# rbenv
+set -x PATH $HOME/.rbenv/bin $PATH
+status --is-interactive; and source (rbenv init -|psub)
+
 # bundler
 set -x BUNDLE_JOBS 32
 set -x BUNDLE_RETRY 3
