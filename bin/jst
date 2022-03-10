@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'time'
+
+utc = ARGV.join(' ')
+puts Time.parse(utc).localtime
