@@ -45,3 +45,5 @@
 [pager]
     branch=cat
     status=cat
+[push]
+    default=current
