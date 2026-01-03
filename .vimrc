@@ -23,8 +23,8 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle "scrooloose/nerdtree"
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/neocomplcache-rsense'
+" NeoBundle 'Shougo/neocomplcache'
+" NeoBundle 'Shougo/neocomplcache-rsense'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc', {

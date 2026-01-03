@@ -24,7 +24,7 @@
     rank = shortlog -s -n --no-merges
     amend = commit --amend
     ammend = amend
-    sync = !git switch master && git pull --rebase origin master && git branch --merged | grep -v master | xargs git branch -d && git fetch --prune && git switch -
+    sync = !default_branch=$(git remote show origin | awk '/HEAD branch/ {print $NF}') && git switch $default_branch && git pull --rebase origin $default_branch && git branch --merged | grep -v $default_branch | xargs -r git branch -d && git fetch --prune && git switch -
 [rebase]
     autosquash = true
     autostash = true
@@ -46,4 +46,11 @@
     branch=cat
     status=cat
 [push]
-    default=current
+	default = current
+	autoSetupRemote = true
+[pull]
+	default = current
+[http]
+	postBuffer = 157286400
+[branch]
+	sort = -committerdate
