@@ -35,6 +35,3 @@ alias be='bundle exec'
 alias diff='git diff --no-index '
 alias less='less -R'
 alias rbcp='git diff master --name-only --diff-filter=ACMR|grep -e .rb\$ -e .rake\$|xargs bundle exec rubocop -a --force-exclusion -c ./.rubocop.yml'
-
-# === 外部ツール ===
-source /Users/koshikawa/.docker/init-fish.sh || true # Added by Docker Desktop
