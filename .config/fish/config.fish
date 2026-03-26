@@ -8,7 +8,7 @@ fish_add_path $HOME/bin
 fish_add_path ./bin
 fish_add_path node_modules/.bin
 
-# === バージョン管理 ===
+# === ランタイム初期化 ===
 status --is-interactive; and source (rbenv init -|psub)
 eval (nodenv init - | source)
 status is-login; and pyenv init --path | source
