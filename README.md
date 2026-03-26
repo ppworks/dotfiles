@@ -18,6 +18,7 @@ ln -nsf ~/repository/github.com/ppworks/dotfiles/.tigrc .tigrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vim .vim
 ln -nsf ~/repository/github.com/ppworks/dotfiles/.vimrc .vimrc
 ln -nsf ~/repository/github.com/ppworks/dotfiles/bin bin
+ln -nsf ~/repository/github.com/ppworks/dotfiles/.nodenv/default-packages .nodenv/default-packages
 ```
 
 # Neobundle

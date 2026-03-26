@@ -64,3 +64,6 @@ source /Users/koshikawa/.docker/init-fish.sh || true # Added by Docker Desktop
 # https://github.com/rails/rails/issues/38560
 # +[__NSCFConstantString initialize] may have been in progress in another thread when fork() was called
 set -x OBJC_DISABLE_INITIALIZE_FORK_SAFETY yes
+
+# Claude Code
+set -x PATH $HOME/.local/bin $PATH
