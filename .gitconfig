@@ -2,14 +2,11 @@
     editor = vim
     pager = less -R
     excludesfile = /Users/koshikawa/.gitignore
-    compression = 0
 [user]
     name = ppworks
     email = naoto5959@gmail.com
 [color]
     ui = auto
-[github]
-    user = ppworks
 [alias]
     a = add
     co = checkout
@@ -17,7 +14,6 @@
     ll = log --graph --decorate --date=short --pretty
     ln = log --graph --decorate --date=short --pretty --name-status
     stat = log --stat --summary
-    wh = whatchanged
     df = diff
     ds = diff --staged
     gr = grep -n
@@ -31,26 +27,13 @@
 [diff]
     algorithm = histogram
     colorMovedWS = ignore-space-change
-[gc]
-    auto = 0
-[filter "lfs"]
-	clean = git-lfs clean %f
-	smudge = git-lfs smudge %f
-	required = true
-[merge "mergepbx"]
-	name = Xcode project files merger
-	driver = mergepbx %O %A %B
-[commit]
-    template=/Users/koshikawa/.commit_template
 [pager]
-    branch=cat
-    status=cat
+    branch = cat
+    status = cat
 [push]
-	default = current
-	autoSetupRemote = true
+    default = current
+    autoSetupRemote = true
 [pull]
-	default = current
-[http]
-	postBuffer = 157286400
+    default = current
 [branch]
-	sort = -committerdate
+    sort = -committerdate
