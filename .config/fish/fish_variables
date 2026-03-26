@@ -4,4 +4,4 @@ SETUVAR __fish_initialized:4300
 SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
 SETUVAR _fisher_plugins:jorgebucaran/fisher
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR --export fish_user_paths:/Users/koshikawa/\x2eep/bin\x1e/opt/homebrew/opt/openjdk\x4011/bin\x1e/opt/homebrew/bin\x1e/Users/koshikawa/\x2enodenv/bin\x1e/opt/homebrew/opt/libpq/bin
+SETUVAR --export fish_user_paths:/Users/koshikawa/repository/github\x2ecom/ppworks/dotfiles/bin\x1e/Users/koshikawa/bin\x1e/Users/koshikawa/\x2elocal/bin\x1e/Users/koshikawa/\x2erbenv/bin\x1e/Users/koshikawa/\x2eep/bin\x1e/opt/homebrew/opt/openjdk\x4011/bin\x1e/opt/homebrew/bin\x1e/Users/koshikawa/\x2enodenv/bin\x1e/opt/homebrew/opt/libpq/bin
