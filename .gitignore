@@ -2,3 +2,4 @@
 .vim/backup/*
 .vim/tmp/*
 .vim/*
+.config/fish/fish_variables

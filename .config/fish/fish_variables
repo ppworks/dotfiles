@@ -1,4 +1,0 @@
-# This file contains fish universal variable definitions.
-# VERSION: 3.0
-SETUVAR __fish_initialized:4300
-SETUVAR --export fish_user_paths:/Users/koshikawa/repository/github\x2ecom/ppworks/dotfiles/bin\x1e/Users/koshikawa/bin\x1e/Users/koshikawa/\x2elocal/bin\x1e/Users/koshikawa/\x2erbenv/bin\x1e/Users/koshikawa/\x2eep/bin\x1e/opt/homebrew/opt/openjdk\x4011/bin\x1e/opt/homebrew/bin\x1e/Users/koshikawa/\x2enodenv/bin\x1e/opt/homebrew/opt/libpq/bin
