@@ -5,8 +5,8 @@ fish_add_path $HOME/.rbenv/bin
 fish_add_path $HOME/.nodenv/bin
 fish_add_path $HOME/.local/bin
 fish_add_path $HOME/bin
-fish_add_path ./bin
-fish_add_path node_modules/.bin
+contains ./bin $PATH; or set -gx PATH ./bin $PATH
+contains node_modules/.bin $PATH; or set -gx PATH node_modules/.bin $PATH
 
 # === ランタイム初期化 ===
 status --is-interactive; and source (rbenv init -|psub)
